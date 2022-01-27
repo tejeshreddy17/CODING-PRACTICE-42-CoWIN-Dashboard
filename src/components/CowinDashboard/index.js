@@ -30,7 +30,7 @@ class CowinDashboard extends Component {
   state = {
     last7daysvaccination: [],
     vaccinationByAge: [],
-    isLoading: LoadingValues.initial,
+    isLoading: LoadingValues.loading,
     Vaccinationbygender: [],
   }
 
@@ -40,8 +40,9 @@ class CowinDashboard extends Component {
 
   gettingDetails = async () => {
     this.setState({isLoading: LoadingValues.loading})
-    const url = 'https://apis.ccbp.in/covid-vaccination-data'
-    const response = await fetch(url)
+    const covidVaccinationDataApiUrl =
+      'https://apis.ccbp.in/covid-vaccination-data'
+    const response = await fetch(covidVaccinationDataApiUrl)
     const data = await response.json()
     // console.log(data)
     if (response.ok === true) {

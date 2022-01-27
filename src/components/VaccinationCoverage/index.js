@@ -26,8 +26,8 @@ const VaccinationCoverage = props => {
   return (
     <BackgroundContainerVaccinationCoverage>
       <VCHeading>Vaccination Coverage</VCHeading>
-      <ResponsiveContainer width="100%" height={500}>
-        <BarChart data={data} width="100%" height="100%">
+      <ResponsiveContainer width={1000} height={300}>
+        <BarChart data={data} width={1000} height={300}>
           <XAxis dataKey="vaccine_date" />
           <YAxis tickFormatter={DataFormatter} />
           <Legend />

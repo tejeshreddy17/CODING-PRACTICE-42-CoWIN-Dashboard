@@ -12,8 +12,8 @@ const VaccinationByGender = props => {
   return (
     <BackgroundContainerVaccinationCoverage>
       <VCHeading>Vaccination by gender</VCHeading>
-      <ResponsiveContainer width="100%" height={300}>
-        <PieChart width="100%" height="100%" align="middle">
+      <ResponsiveContainer width={1000} height={300}>
+        <PieChart width={1000} height={300} align="middle">
           <Pie
             cx="50%"
             cy="50%"
